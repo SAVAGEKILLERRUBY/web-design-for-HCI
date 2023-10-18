@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Import Fontawesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="css/main.css" />
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ByteSphere University </title>
+</head>
+
+<body>
+  <div class="body-bg">
+    <!-- navbar -->
+    <div class="navbar-fixed">
+ <nav class="green ">
+  <div class="container">
+    <div class="nav-wrapper"> <img src="img/SCHOOL LOGO.png" id="logo" style="width: 50px; margin-top: 12px;" class="hide-on-med-and-down responsive-img" alt=""><a href="#" class="brand-logo left"> ByteSphere University</a>
+   
+    </ul>
+      
+  </div></div>
+  </div>
+ </nav>
+ <br><br><br>
+ <!-- form -->
+ <div class="row">
+  <div class="col s6 m6 offset-m3 offset-s3">
+    <div class="card-panel z-depth-3">
+      <form action=""><div class="container"><h3 class="black-text center">Login</h3>
+      
+      <b class="black-text">Email</b><input placeholder="Email" type="email" class="black-text validate" name="" id="">
+      <b class="black-text">Password</b><input type="password" name="" placeholder="password" class="validate black-text" id="">
+      
+      <div class="center-align">
+      <input type="button" value="Login" class="btn waves-effect green waves-light center-block"><br><br>
+      <a href="#registermodal" class="blue-text modal-trigger">Not Registered?</a></div>
+      </div></form>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- modal -->
+<div id="registermodal" class="  modal modal-fixed-footer">
+  <div class="modal-content">
+    <div class="container">
+      
+      <h3 class="black-text center-align">Register</h3>
+
+      
+    <form action="">
+      <div class="input-field">
+      <label class="black-text">First Name</label>
+      <input type="text" name="" placeholder="First Name" id="" class="black-text validate" required>
+    </div>
+
+      <label class="black-text">Last Name</label>
+      <input type="text" name="" placeholder="Last Name" id="" class="black-text validate" required>
+
+      <label class="black-text">Middle Name</label>
+      <input type="text" name="" placeholder="Middle Name" id="" class="black-text validate" required>
+
+      <label class="black-text">Age</label>
+      <input type="number" class="black-text validate" placeholder="Age" name="Age" id="" required>
+
+      <label class="black-text">Address</label>
+      <input type="text" name="" placeholder="Address" id="" class="black-text" required>
+
+      <label class="black-text">Phone Number</label>
+      <input type="number" placeholder="Phone Number" name="" id="">
+
+      <label class="black-text" data-error="invalid" data-success="valid" for="email">Email</label>
+      <input type="email" name="" placeholder="Email" id="" class="black-text validate">
+      <div class="input-field">
+      <label for="" class="black-text">Subject you Taught</label>
+      <div class="chip-input"></div></div>
+
+      <div class="input-field">
+      <label for="" class="black-text">Date of Birth</label>
+      <input type="text" name="" id="date" class="datepicker" required></div>
+
+      
+      <p ><label for="gender" class="black-text">Gender:</label>
+        <input  type="radio" name="gender" class=" validate" id="male"><label for="male" class="black-text">Male</label>
+        <input  type="radio" name="gender" class="validate" id="female"><label for="female" class="black-text">Female</label>
+      </p>
+
+      <div class="input-field">
+      <label for="" class="black-text">Years of Teaching</label>
+      <input type="number" name="" id="" class="black-text validate">
+</div>
+
+      
+      <label for="educ" class="black-text">Educational Background</label><div class="input-field">
+      <select name="educ" id="educ">
+        <option value=""disabled selected>Pick Your Educational Background</option>
+        <option value="Bachelor_Degree">Bachelor's Degree</option>
+        <option value="Master_Degree">Master's Degree</option>
+        <option value="Doctorate">Doctorate</option>
+
+
+      </select>
+</div>
+      <div class="input-field">
+      <label for="course" class="black-text">Course</label>
+      <input type="text" name="course" id="course" class="black-text" placeholder="Course">
+    </div>
+      <input id="alert" type="submit" value="Submit" class="btn btn-large green waves-effect">
+
+    </form>
+  </div>
+</div>
+</div>
+<footer class="section page-footer center green darken-3">
+  <div class="container">
+    <div class="">
+      <div class="" ><div class="container">
+        <div>
+          <p class="flow-text" style="font-size: small;">ByteSphere University &copy; 2023</p>
+        </div>
+      </div></div>
+    </div>
+  </div>
+</footer>
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script>
+    $(function(){
+        $(window).scroll(function (){
+    if($(window).scrollTop() > 2){
+        $('nav').addClass('green').removeClass('transparent');
+    }
+    else{
+        $('nav').removeClass('green').addClass('transparent');
+    }
+});
+    });
+    $(document).ready(function () {
+      $('.dropdown-button').dropdown({
+                constrainWidth: false,
+                hover: true,
+                belowOrigin: true,
+                alignment: 'left'
+            });
+      // Init Sidenav
+      $('.button-collapse').sideNav();
+            $('#alert').click(function(){
+              alert('Register Complete');
+            });
+      $('.carousel.carousel-slider').carousel({
+        fullWidth:true,
+      });
+      $('.modal').modal();
+      $('.chip-input').material_chip({
+                placeholder: 'Subject',
+                secondaryPlaceholder: '+Subject',
+                autocompleteOptions: {
+                    data: {
+                        'html': null,
+                        'css': null,
+                        'javascript': null,
+                        'Programming':null,
+                        'Data Structures and Algorithms':null,
+                        'Database Management':null,
+                        'Web Development':null,
+                        'Networking':null,
+                        'Software Engineering':null,
+                        'Cybersecurity':null,
+                        'Mobile App Development':null,
+                        'Cloud Computing':null,
+                        'IT Ethics and Laws':null,
+                        'IT Project Management':null,
+                        'Artificial Intelligence and Machine Learning':null,
+                        'Internet of Things (IoT)':null,
+                        'User Interface (UI) and User Experience (UX) Design':null,
+                        
+
+
+                    }
+                }
+            });
+            $('.datepicker').on('mousedown', function(e) {
+                e.preventDefault();
+            });
+            $('.datepicker').pickadate({
+                selectMonths: true,
+                selectYears: 100,
+                classOnSelect: true
+            })
+
+            //add Chip
+            $('.chip-input').on('chip.add', function(e, chip) {
+                // alert(`You added a chip - ${chip.tag}`);
+            });
+            $('select').material_select()
+
+
+    });
+  </script>
+</body>
+
+</html>
