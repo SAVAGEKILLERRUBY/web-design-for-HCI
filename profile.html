@@ -16,36 +16,105 @@
 </head>
 
 <body>
+
   <div class="body-bg">
+    
+    
     <!-- navbar -->
     <div class="navbar-fixed">
  <nav class="green ">
+    <div class=""> <a href="#!" data-activates="slide-out" id="" class="show-on-medium-and-up button-collapse ">
+        <i class="material-icons white-text ">menu</i> </a>
   <div class="container">
-    <div class="nav-wrapper"> <img src="img/SCHOOL LOGO.png" id="logo" style="width: 50px; margin-top: 12px;" class="hide-on-med-and-down responsive-img" alt=""><a href="#" class="brand-logo left"> ByteSphere University</a>
+    
+        
+        <img src="img/SCHOOL LOGO.png" id="logo" style="width: 50px; margin-top: 12px;" class="hide-on-med-and-down responsive-img" alt="">
+        
+        <a href="#!" class="brand-logo left-align">ByteSphere University</a>
    
-    </ul>
+ 
       
   </div></div>
   </div>
  </nav>
+ <!-- sidenav -->
+
+ <ul id="slide-out" class="side-nav">
+    <li><div class="user-view">
+        <div class="background"> <img src="/img/925fc6741e9864c0c082b6e6559aef1a.jpg" class="background"  alt=""></div>
+        <img src="img/profile_pic.png" alt="" class="circle">
+
+    </div></li>
+</ul>
  <br><br><br>
- <!-- form -->
  <div class="row">
-  <div class="col s10 m8 offset-m2 offset-s1">
-    <div class="card-panel z-depth-3">
-      <form id="LoginForm" action="profile.html"><div class="container"><h3 class="black-text center">Login</h3>
-      
-      <b class="black-text">Email</b><input placeholder="Email" type="email" class="black-text validate" name="email" id="emailInput">
-      <b class="black-text">Password</b><input type="password" name="password" placeholder="password" class="validate black-text" id="passwordInput">
-      
-      <div class="center-align">
-      <input type="submit" value="Login" onclick="nextTo()" goto="" class="btn waves-effect green waves-light center-block"><br><br>
-      <a href="#registermodal" class="blue-text modal-trigger">Not Registered?</a></div>
-      </div></form>
-    </div>
-  </div>
+    <div class="col s12 m10 l10 offset-m1 offset-l1">
+ <div class="card horizontal green">
+    
+        <div class="card-image">
+            <img src="img/profile_pic.png" style="width: 300px;" class=""  alt="">
+        </div>
+        <div class="card-stacked">
+            <div class="card-content"><h2 class="">My Profile</h2>
+            <p class="white-text">Name: Roly Gatus</p>
+            <p class="white-text">Age: 23</p>
+            <p class="white-text">Adress: Sitio Militar Bahay Toro Quezon City</p>
+            <p class="white-text">Phone Number: 09982480471</p>
+            <p class="white-text">BirthDate: 11/27/2000</p>
+            <p class="white-text">Gender: Male</p>
+            <p class="white-text">Course: Bachelor Science of Information Technology</p>
+            <br><br>
+            <span class="white-text">Subjects:</span>
+            <div class="card-tabs">
+                <ul class="tabs tabs-width-fixed tabs-transparent">
+                    <li class="tab"><a href="#1">IT ELECTIVE 1 (Web Fundamental)</a></li>
+                    <li class="tab"><a href="#2">Networking 1</a></li>
+                    <li class="tab"><a href="#3">Data Structures And Algorithms</a></li>
+                </ul>
+            </div>
+            <div class="card-content white black-text">
+                
+            
+                <table id="1" class="bordered highlight  responsive-table">
+                    <thead>
+                        <tr>
+                            <th>
+                                <p>Section</p>
+                            </th>
+                            <th>
+                                <p>Course</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody><tr>
+                        <th><a href="" class="black-text">2121</a></th>
+                        <th><a href="" class="black-text">BSIT</th>
+                    </tr>
+                    <tr>
+                        <th><a href="" class="black-text">2122</a></th>
+                        <th><a href="" class="black-text">BSCE</a></th>
+                    </tr>
+                    <tr>
+                        <th><a href="" class="black-text">2123</a></th>
+                        <th><a href="" class="black-text">BSCS</a></th>
+                    </tr>
+                    <tr>
+                        <th><a href="" class="black-text">2124</a></th>
+                        <th><a href="" class="black-text">BSIS</a></th>
+                    </tr>
+                    <tr>
+                        <th><a href="" class="black-text">2125</a></th>
+                        <th><a href="" class="black-text">BSDS</a></th>
+                    </tr>
+                    </tr></tbody>
+                </table>
+            </div>
+            
+            
+            </div>
+    </div></div>
 </div>
-</div>
+ </div>
 
 <!-- modal -->
 <div id="registermodal" class="  modal modal-fixed-footer">
@@ -153,7 +222,14 @@
                 alignment: 'left'
             });
       // Init Sidenav
-      $('.button-collapse').sideNav();
+      $('.button-collapse').sideNav({
+                menuWidth: 300,
+                edge: 'left',
+                closeOnClick: false,
+                draggable: true,
+                onOpen: () => console.log('Menu Open'),
+                onClose: () => console.log('Menu Close')
+            });
             $('#alert').click(function(){
               alert('Register Complete');
             });
@@ -202,20 +278,9 @@
             $('.chip-input').on('chip.add', function(e, chip) {
                 // alert(`You added a chip - ${chip.tag}`);
             });
-            $('select').material_select();
+            $('select').material_select()
 
 
-           
-//             function nextTo() {
-//  var Email = document.getElementById("email").value;
-//  var Password = document.getElementById("password").value;
-
-//  if (Email === "" || Password === "") {
-//     alert("Please enter your Email and Password");
-//  } else {
-//     window.location.href = 'profile.html';
-//  }
-// }
     });
   </script>
 </body>
