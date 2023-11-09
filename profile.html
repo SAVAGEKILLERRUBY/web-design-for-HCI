@@ -9,7 +9,10 @@
   <!--Import materialize.css-->
   <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
   <link type="text/css" rel="stylesheet" href="css/main.css" />
-
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ByteSphere University </title>
@@ -45,9 +48,7 @@
         <img src="img/profile_pic.png" alt="" class="circle">
 
     </div></li>
-    <li><a href="#!" class="waves-effect disabled" >Profile</a></li>
-    <li><a href="#!" class="waves-effect">Subjects</a></li>
-    <li><a href="#!" class="waves-effect">Courses</a></li>
+    
     <li><a href="#!" class="waves-effect">Settings</a></li>
     <li><a href="index.html" class="btn center-align green">Logout</a></li>
     
@@ -58,25 +59,25 @@
  <div class="card horizontal green">
    
         <div class="card-image ">
-            <img src="img/profile_pic.png" style=" margin-left: 50px; margin-top: 20px;" class=" responsive-img "  alt="">
+            <img src="img/profile_pic.png" style=" margin-left: 25px; margin-top: 20px;" class="circle responsive-img "  alt="">
         </div><div class="container">
         <div class="card-stacked"> 
             <div class="card-content">
               <h2 class="">My Profile</h2>
-            <p class="white-text">Name: Roly Gatus</p>
-            <p class="white-text">Age: 23</p>
-            <p class="white-text">Adress: Sitio Militar Bahay Toro Quezon City</p>
-            <p class="white-text">Phone Number: 09982480471</p>
-            <p class="white-text">BirthDate: 11/27/2000</p>
-            <p class="white-text">Gender: Male</p>
-            <p class="white-text">Course: Bachelor Science of Information Technology</p>
+            <p class="white-text">Name: <span id="fname">Roly</span> <span id="midname">A.</span> <span id="lname">Gatus</span></p>
+            <p class="white-text">Age: <span id="age">23</span></p>
+            <p class="white-text">Adress: <span id="adress">140 Sitio Militar Bahay Toro Quezon City</span></p>
+            <p class="white-text">Phone Number: <span id="pnum">09982480471</span></p>
+            <p class="white-text">BirthDate: <span id="birthdate">11/27/2000</span></p>
+            <p class="white-text">Gender: <span id="gender">Male</span></p>
+            <p class="white-text">Course: <span id="course">Bachelor Science of Information Technology</span></p>
             <br><br>
-            <span class="white-text">Subjects:</span>
+            <h3 id="white-text">Subjects:</h3>
             <div class="card-tabs">
                 <ul class="tabs tabs-width-fixed tabs-transparent">
-                    <li class="tab"><a href="#1">IT ELECTIVE 1 (Web Fundamental)</a></li>
-                    <li class="tab"><a href="#2">Networking 1</a></li>
-                    <li class="tab"><a href="#3">Data Structures And Algorithms</a></li>
+                    <li class="tab"><a href="#1"><span id="sub1">IT ELECTIVE 1 (Web Fundamental)</span></a></li>
+                    <li class="tab"><a href="#2"><span id="sub2">Networking 1</span></a></li>
+                    <li class="tab"><a href="#3"><span id="sub3">Data Structures And Algorithms</span></a></li>
                 </ul>
                 
             </div> 
@@ -85,7 +86,7 @@
             <div class="  black-text">
                 
            
-                <table id="1" class="white center bordered  responsive-table ">
+                <table id="1" class="white center bordered striped  responsive-table ">
                     <thead>
                         <tr>
                             <th>
@@ -102,9 +103,9 @@
 
 
                     <tbody class="white"><tr>
-                        <th><a href="" class="black-text">2121</a></th>
-                        <th><a href="" class="black-text">BSIT</th>
-                          <th><a href="" class="black-text">40/50</a></th>
+                        <th><a href="#2121" class="modal-trigger black-text"><span id="section">2121</span></a></th>
+                        <th><a href="#2121" class="modal-trigger black-text"><span id="course">BSIT</span></a></th>
+                          <th><a href="#2121" class="modal-trigger black-text"><span id="passing">40</span> / <span id="total-student">50</span></a></th>
                     </tr>
                     <tr>
                         <th><a href="" class="black-text">2122</a></th>
@@ -229,6 +230,34 @@
  </div>
 
 <!-- modal -->
+<div class="modal green modal-fixed-footer" id="2121">
+  <div class="modal-content">
+    <div class="container">
+      <h3 class="white-text center-align">
+        2121 BSIT
+      </h3>
+      <table id="section-2121" class="center responsive-table">
+        <thead>
+          <tr>
+            <th>Last Name</th>
+            <th>First Name</th>
+            <th>Middle Initial</th>
+            <th>Student Number</th>
+            <th>Remark</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+
 <div id="registermodal" class="  modal modal-fixed-footer">
   <div class="modal-content">
     <div class="container">
@@ -315,6 +344,8 @@
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script src="js/studentdb.js" ></script>
+ 
   <script>
     $(function(){
         $(window).scroll(function (){
@@ -391,6 +422,31 @@
                 // alert(`You added a chip - ${chip.tag}`);
             });
             $('select').material_select()
+
+
+ const table=document.getElementById('section-2121');
+const tbody = table.querySelector('tbody');
+
+studentData.forEach(student=>{
+    const row=tbody.insertRow();
+    const fnamecell=row.insertCell(0);
+    const lnamecell=row.insertCell(1);
+    const MiddleInitialcell=row.insertCell(2);
+    const studentNumbercell=row.insertCell(3);
+    const remarkcell=row.insertCell(4);
+
+
+
+    fnamecell.textContent=student.FirstName;
+    lnamecell.textContent=student.LastName;
+    MiddleInitialcell.textContent=student.MiddleInitial;
+    studentNumbercell.textContent=student.StudentNumber;
+    remarkcell.textContent=student.remark;
+
+})
+
+
+
 
 
     });
