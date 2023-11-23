@@ -58,26 +58,37 @@
     <div class="col s12 m10 l10 offset-m1 offset-l1">
  <div class="card horizontal green">
    
-        <div class="card-image ">
+        <div class="card-image  "><div class="responsive-img"><div class="profile-picture">
             <img src="img/profile_pic.png" style=" margin-left: 25px; margin-top: 20px;" class="circle responsive-img "  alt="">
-        </div><div class="container">
+            
+          
+          </div> </div></div><div class="container">
         <div class="card-stacked"> 
             <div class="card-content">
+              <a href="#!" class="dropdown-button btn right green darken-2 " data-activates="my-dropdown" ><i class="material-icons">edit</i></a>
+              <ul class="dropdown-content" id="my-dropdown">
+                <li><a class="black-text modal-trigger" href="#editInfo">Edit Information</a></li>
+                <li><a class="black-text modal-trigger" href="#editSub">Edit Subjects</a></li>
+                <li><a class="black-text modal-trigger" href="#editPic">Edit Profile Picture</a></li>
+              </ul>
+              
               <h2 class="">My Profile</h2>
-            <p class="white-text">Name: <span id="fname">Roly</span> <span id="midname">A.</span> <span id="lname">Gatus</span></p>
-            <p class="white-text">Age: <span id="age">23</span></p>
-            <p class="white-text">Adress: <span id="adress">140 Sitio Militar Bahay Toro Quezon City</span></p>
-            <p class="white-text">Phone Number: <span id="pnum">09982480471</span></p>
-            <p class="white-text">BirthDate: <span id="birthdate">11/27/2000</span></p>
-            <p class="white-text">Gender: <span id="gender">Male</span></p>
-            <p class="white-text">Course: <span id="course">Bachelor Science of Information Technology</span></p>
+              
+            <p class="white-text"><strong> Name:</strong> <span id="fname">Roly</span> <span id="midname">A.</span> <span id="lname">Gatus</span></p>
+            <p class="white-text"><strong>Age:</strong> <span id="age">23</span></p>
+            <p class="white-text"><strong>Adress:</strong> <span id="adress">140 Sitio Militar Bahay Toro Quezon City</span></p>
+            <p class="white-text"><strong>Phone Number: </strong> <span id="pnum">09982480471</span></p>
+            <p class="white-text"><strong>BirthDate: </strong> <span id="birthdate">2000-11-27</span></p>
+            <p class="white-text"><strong>Gender: </strong><span id="gender">Male</span></p>
+            <p class="white-text"><strong>Course: </strong> <span id="course">Bachelor Science of Information Technology</span></p>
+            <p class="white-text"><strong>Rating: </strong><span id="rating">4.2</span>/5</p>
             <br><br>
             <h3 id="white-text">Subjects:</h3>
             <div class="card-tabs">
-                <ul class="tabs tabs-width-fixed tabs-transparent">
-                    <li class="tab"><a href="#1"><span id="sub1">IT ELECTIVE 1 (Web Fundamental)</span></a></li>
-                    <li class="tab"><a href="#2"><span id="sub2">Networking 1</span></a></li>
-                    <li class="tab"><a href="#3"><span id="sub3">Data Structures And Algorithms</span></a></li>
+                <ul id="selectedList" class="tabs tabs-width-fixed tabs-transparent">
+                    <li class="tab"><a href="#1">IT ELECTIVE 1 (Web Fundamental)</a></li>
+                    <li class="tab"><a href="#2">Networking 1</a></li>
+                    <li class="tab"><a href="#3">Data Structures And Algorithms</a></li>
                 </ul>
                 
             </div> 
@@ -104,8 +115,8 @@
 
                     <tbody class="white"><tr>
                         <th><a href="#2121" class="modal-trigger black-text"><span id="section">2121</span></a></th>
-                        <th><a href="#2121" class="modal-trigger black-text"><span id="course">BSIT</span></a></th>
-                          <th><a href="#2121" class="modal-trigger black-text"><span id="passing">40</span> / <span id="total-student">50</span></a></th>
+                        <th><a href="#!" class="modal-trigger black-text"><span id="course">BSIT</span></a></th>
+                          <th><a href="#!" class="modal-trigger black-text"><span id="passing">40</span> / <span id="total-student">50</span></a></th>
                     </tr>
                     <tr>
                         <th><a href="" class="black-text">2122</a></th>
@@ -256,7 +267,84 @@
 </div>
 
 
+<div id="editInfo" class="modal modal-fixed-footer">
+  <br><br><br>
+  <div class="modal-content">
+<h3 class="black-text center-align">Edit Info</h3>
 
+ <div class="container "> <form action="" id="Edit-Info-form">
+  <input class="black-text" type="text" name="fname" placeholder="First Name" id="fname">
+  <label for="fname">First Name</label>
+  <input class="black-text" type="text" name="lname" placeholder="Last Name" id="lname">
+  <label for="lname">Last Name</label>
+  <input class="black-text" type="text" name="midname" id="midname" placeholder="Middle Name">
+  <label for="midname">Middle Name</label>
+  <input class="black-text" type="date" name="birthdate" id="birthdate">
+  <label for="birthdate">Birth Date</label>
+  <input class="black-text" type="tel" name="pnum" id="pnum" placeholder="Phone Number">
+  <label for="pnum">Phone Number</label>
+  <input type="text" name="course" id="course" class="black-text" placeholder="Course">
+  <label for="course">Course</label>
+  <br><br><br><br><br>
+
+ 
+<button type="submit" class="btn btn-large green darken-2 waves-effect ">Submit</button>
+</form></div></div>
+
+<div class="modal-footer">
+  <a href="#!" class="modal-action modal-close waves-effect waves-ripple btn btn-large green darken-2">Close</a>
+</div>
+</div>
+
+<div id="editPic" class="modal modal-fixed-footer">
+  <div class="modal-content">
+    <div class="container">
+      <br><br><br>
+      <h3 class="black-text">Upload Profile Picture</h3>
+      <form action="" id="edit-profile-pic">
+        <div class="file-field input-field">
+          <div class="btn green darken-2">
+            <span class="">Upload Picture Here</span>
+            <input type="file" name="pic" id="pic" accept="image/*" id="profilepic"  >
+  
+          </div>
+          <br>
+          <div class="file-path-wrapper">
+            <input type="text" name="file-path" id="file-path" class="black-text file-path"></div>
+        </div>
+        <button type="submit" class=" btn btn-large green darken-2">Submit</button>
+      </form>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-action modal-close waves-effect  btn btn-large green darken-2">Exit</a>
+  </div>
+</div>
+
+<div id="editSub" class="modal modal-fixed-footer">
+  <div class="container">
+    <br><br><br>
+    <h3 class="black-text center-align">Select Subjects</h3>
+
+    <form action="" id="Edit-Sub-form">
+     <select class="black-text" name="subject-selection" id="subject-selection" multiple>
+      <option value="#!"selected disabled>Select 3 Subjects</option>
+      <option data-href="1" class="black-text" value="ITE1">	IT ELECTIVE 1 (Web Fundamental)</option>
+      <option data-href="2" class="black-text" value="CCS2107">Networking 1</option>
+      <option data-href="3" class="black-text" value="CC104">	Data Structures And Algorithms</option>
+      <option data-href="4" class="black-text" value="CCS2105">	Integrative Programming And Technologies 1</option>
+      <option data-href="5" class="black-text" value="CCS1201">	Introduction To Human Computer Interaction</option>
+     </select>
+<br>
+<button class="btn green darken-2 waves-effect waves-block" type="submit">Submit</button>
+    </form>
+
+   
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-action modal-close waves-effect green darken-2 black-text btn btn-flat">Exit</a></div>
+  </div>
+</div>
 
 <div id="registermodal" class="  modal modal-fixed-footer">
   <div class="modal-content">
@@ -347,6 +435,11 @@
   <script src="js/studentdb.js" ></script>
  
   <script>
+
+    // student database js
+   
+
+
     $(function(){
         $(window).scroll(function (){
     if($(window).scrollTop() > 2){
@@ -379,35 +472,8 @@
       $('.carousel.carousel-slider').carousel({
         fullWidth:true,
       });
-      $('.modal').modal();
-      $('.chip-input').material_chip({
-                placeholder: 'Subject',
-                secondaryPlaceholder: '+Subject',
-                autocompleteOptions: {
-                    data: {
-                        'html': null,
-                        'css': null,
-                        'javascript': null,
-                        'Programming':null,
-                        'Data Structures and Algorithms':null,
-                        'Database Management':null,
-                        'Web Development':null,
-                        'Networking':null,
-                        'Software Engineering':null,
-                        'Cybersecurity':null,
-                        'Mobile App Development':null,
-                        'Cloud Computing':null,
-                        'IT Ethics and Laws':null,
-                        'IT Project Management':null,
-                        'Artificial Intelligence and Machine Learning':null,
-                        'Internet of Things (IoT)':null,
-                        'User Interface (UI) and User Experience (UX) Design':null,
-                        
-
-
-                    }
-                }
-            });
+      
+     
             $('.datepicker').on('mousedown', function(e) {
                 e.preventDefault();
             });
@@ -422,28 +488,16 @@
                 // alert(`You added a chip - ${chip.tag}`);
             });
             $('select').material_select()
+            $('.modal').modal({
+                dismissible: true,
+                inDuration: 300,
+                outDuration: 200,
+                ready: function(modal, trigger) {
+                    console.log('Modal Open', modal, trigger);
+                }
+            });
 
-
- const table=document.getElementById('section-2121');
-const tbody = table.querySelector('tbody');
-
-studentData.forEach(student=>{
-    const row=tbody.insertRow();
-    const fnamecell=row.insertCell(0);
-    const lnamecell=row.insertCell(1);
-    const MiddleInitialcell=row.insertCell(2);
-    const studentNumbercell=row.insertCell(3);
-    const remarkcell=row.insertCell(4);
-
-
-
-    fnamecell.textContent=student.FirstName;
-    lnamecell.textContent=student.LastName;
-    MiddleInitialcell.textContent=student.MiddleInitial;
-    studentNumbercell.textContent=student.StudentNumber;
-    remarkcell.textContent=student.remark;
-
-})
+ 
 
 
 
