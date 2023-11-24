@@ -36,8 +36,8 @@
     <div class="card-panel z-depth-3">
       <form id="LoginForm" action=""><div class="container"><h3 class="black-text center">Login</h3>
       
-      <b class="black-text">Email</b><input placeholder="Email" type="email" class="black-text validate" name="email" id="emailInput">
-      <b class="black-text">Password</b><input type="password" name="password" placeholder="password" class="validate black-text" id="passwordInput">
+      <b class="black-text">Email</b><input placeholder="Email" type="email" class="black-text validate" name="email" id="emailInput" required>
+      <b class="black-text">Password</b><input type="password" name="password" placeholder="password" class="validate black-text" id="passwordInput" required>
       
       <div class="center-align">
       <input type="submit" value="Login" onclick="" goto="" class="btn waves-effect green waves-light center-block"><br><br>
@@ -158,6 +158,13 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
   <script>
+document.getElementById('LoginForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // prevent form from submitting normally
+    window.location.href = 'profile.html'; // replace with your actual next page
+});
+
+
+
     $(function(){
         $(window).scroll(function (){
     if($(window).scrollTop() > 2){
