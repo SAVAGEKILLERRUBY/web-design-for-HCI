@@ -1,13 +1,6 @@
 .body-bg{
-    background: url(../img/bg_building.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    min-height: 600px;
-    overflow: hidden;
-    position: relative;
-    color: white;
-    overflow-y: scroll
+    background: green;
+    
   };
   input[type="radio"]:checked{
 background-color: green;
@@ -15,4 +8,6 @@ background-color: green;
   .background{
     background: url(../img/download.jpeg);
   };
-  
+  .rounded{
+    border-radius: 20%;
+  }

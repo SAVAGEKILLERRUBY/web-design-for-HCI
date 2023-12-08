@@ -18,27 +18,31 @@
   <title>ByteSphere University </title>
 </head>
 
-<body>
+<body class="body-bg">
 
-  <div class="body-bg">
+  <div >
     
     
     <!-- navbar -->
     <div class="navbar-fixed">
+      <div class="nav-wrapper">
  <nav class="green ">
-    <div class=""> <a href="#!" data-activates="slide-out" id="" class="show-on-medium-and-up button-collapse ">
-        <i class="material-icons white-text ">menu</i> </a>
-  <div class="container">
     
         
-        <img src="img/SCHOOL LOGO.png" id="logo" style="width: 50px; margin-top: 12px;" class=" responsive-img" alt="">
         
-        <a href="#!" class="brand-logo hide-on-med-and-down left-align ">ByteSphere University</a>
+  <div class="container">
+    <ul class="right" id="nav-mobile">
+      <li><a href="index.html" class="btn white waves-effect waves-green  waves-ripple black-text " style="border-radius: 10px;" >Logout</a></li>
+    </ul>
+        
+        <img src="img/SCHOOL LOGO.png" id="logo" style="width: 80px; margin-top: 5px;" class=" responsive-img" alt="">
+        
+        <a href="#!" class="brand-logo hide-on-med-and-down left-align " style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">ByteSphere University</a>
    
  
       
   </div></div>
-  </div>
+  </div></div>
  </nav>
  <!-- sidenav -->
 
@@ -56,10 +60,10 @@
  <br><br><br>
  <div class="row">
     <div class="col s12 m10 l10 offset-m1 offset-l1">
- <div class="card horizontal green">
+ <div class="card horizontal green" style="border-radius: 20px;">
    
-        <div class=""><div class=""><div class="profile-picture">
-            <img src="img/profile_pic.png" style="height: auto; width: 100%; margin-left: 25px; margin-top: 20px;" class="circle  materialboxed "  alt="">
+        <div class=" container"><div class=""><div class="card-image ">
+            <img src="img/profile_pic.png" style="width: 100%; margin-left: 50%;" class="circle  materialboxed "  alt="Profile Picture">
            
             
           
@@ -73,7 +77,7 @@
                 <li><a class="black-text modal-trigger" href="#editPic">Edit Profile Picture</a></li>
               </ul>
               
-              <h2 class="">My Profile</h2>
+              <h2 class="brand-logo white-text"style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">My Profile</h2>
               
             <p class="white-text"><strong> Name:</strong> <span id="fname">Roly</span> <span id="midname">A.</span> <span id="lname">Gatus</span></p>
             <p class="white-text"><strong>Age:</strong> <span id="age">23</span></p>
@@ -84,20 +88,31 @@
             <p class="white-text"><strong>Course: </strong> <span id="course">Bachelor Science of Information Technology</span></p>
             <p class="white-text"><strong>Rating: </strong><span id="rating">4.2</span>/5</p>
             <br><br>
-            <h3 id="white-text">Subjects:</h3>
+            
+            
+            </div>
+    </div></div></div>
+</div>
+ </div>
+
+ <div class="row">
+  <div class="col s12 m10 l10 offset-m1 offset-l1">
+    <div class="card green" style="border-radius: 20px;">
+      <div class="card-content">
+        <span class="card-title white-text" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Subject</span>
             <div class="card-tabs">
-              <ul id="selectedList" class="tabs tabs-width-fixed tabs-transparent">
+              <ul id="selectedList" style="width: 100%; height: 10%;" class="tabs tabs-width-fixed tabs-transparent">
                 <li id="option1" class="tab"><a href="#1">IT ELECTIVE 1 (Web Fundamental)</a></li>
                 <li id="option2" class="tab" ><a href="#2">Networking 1</a></li>
                 <li id="option3" class="tab" ><a href="#3">Data Structures And Algorithms</a></li>
                 <li id="option4" class="tab" ><a href="#4">Integrative Programming And Technologies 1</a></li>
                 <li id="option5" class="tab"  ><a href="#5">Introduction To Human Computer Interaction</a></li>
               </ul>
-                
-            </div> 
-            
+            </div>
+        
           
-            <div class="  black-text">
+          
+            <div class="black-text">
                 
            
                 <table id="1" class="white center bordered striped  responsive-table ">
@@ -323,99 +338,99 @@
         
 
             </div>
-            
-            </div>
-    </div></div></div>
-</div>
+        </div>
+      </div>
+    </div>
+  </div>
  </div>
 
 <!-- modal -->
-<div class="modal green modal-fixed-footer" id="2121">
+<div class="modal white modal-fixed-footer" style="border-radius: 20px;" id="2121">
   <div class="modal-content">
     <div class="container">
-      <h3 class="white-text center-align">
+      <h3 class="black-text ">
         2121 BSIT
       </h3>
-      <table id="section-2121" class="center responsive-table">
+      <table id="section-2121" class="center  responsive-table">
         <thead>
           <tr>
+            <th>Student Number</th>
             <th>Last Name</th>
             <th>First Name</th>
             <th>Middle Initial</th>
-            <th>Student Number</th>
             <th>Remark</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr><td>001</td>
             <td>Doe</td>
             <td>John</td>
             <td>M</td>
-            <td>001</td>
-            <td>Pass</td>
+            
+            <td>1.25</td>
           </tr>
-          <tr>
+          <tr><td>002</td>
             <td>Smith</td>
             <td>Jane</td>
             <td>K</td>
-            <td>002</td>
-            <td>Pass</td>
+            
+            <td>2.0</td>
           </tr>
-          <tr>
+          <tr><td>003</td>
             <td>Johnson</td>
             <td>Robert</td>
             <td>L</td>
-            <td>003</td>
-            <td>Fail</td>
+            
+            <td>5.0</td>
           </tr>
-          <tr>
+          <tr><td>004</td>
             <td>Garcia</td>
             <td>Emily</td>
             <td>N</td>
-            <td>004</td>
-            <td>Pass</td>
+            
+            <td>3.0</td>
           </tr>
-          <tr>
+          <tr><td>005</td>
             <td>Kim</td>
             <td>Michael</td>
             <td>J</td>
-            <td>005</td>
-            <td>Pass</td>
+            
+            <td>1.5</td>
           </tr>
-          <tr>
+          <tr><td>006</td>
             <td>Wang</td>
             <td>Linda</td>
             <td>R</td>
-            <td>006</td>
-            <td>Fail</td>
+            
+            <td>5.0</td>
           </tr>
-          <tr>
+          <tr><td>007</td>
             <td>Chen</td>
             <td>David</td>
             <td>S</td>
-            <td>007</td>
-            <td>Pass</td>
+            
+            <td>3.0</td>
           </tr>
-          <tr>
+          <tr><td>008</td>
             <td>Nguyen</td>
             <td>Sarah</td>
             <td>T</td>
-            <td>008</td>
-            <td>Fail</td>
+            
+            <td>5.0</td>
           </tr>
-          <tr>
+          <tr><td>009</td>
             <td>Gupta</td>
             <td>Arun</td>
             <td>U</td>
-            <td>009</td>
-            <td>Pass</td>
+            
+            <td>2.25</td>
           </tr>
-          <tr>
+          <tr><td>010</td>
             <td>Wilson</td>
             <td>Olivia</td>
             <td>V</td>
-            <td>010</td>
-            <td>Pass</td>
+            
+            <td>1.75</td>
           </tr>
         </tbody>
 
@@ -504,6 +519,257 @@
     <a href="#!" class="modal-action modal-close waves-effect green darken-2 black-text btn btn-flat">Exit</a></div>
   </div>
 </div>
+<div id="contact_modal" class="modal green" style="border-radius: 20px;">
+<div class="modal-content">
+  <div class="container">
+    <h4 class="white-text">About Us</h4>
+    <p class="white-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatem neque explicabo rem nisi soluta suscipit voluptates atque sequi, cumque ducimus natus eveniet aut voluptas cupiditate consequatur corrupti recusandae sapiente? Assumenda laborum nihil recusandae voluptatibus libero, cupiditate quidem aliquam minus, esse quia, dicta illum iste obcaecati saepe quas error. Inventore.</p>
+
+
+  </div>
+</div>
+
+</div>
+
+<div id="developer_modal" class="modal modal-fixed-footer green" style="border-radius: 20px;">
+  <div class="modal-content">
+    <div class="container">
+      <h3 class="white-text">Developers</h3>
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="card " style="border-radius: 20px;">
+            <div class="card-image">
+              <img src="img/profile_pic.png" alt="Roly Profile Pic">
+            </div>
+            <span class="card-title black-text"> <strong>Programmer: </strong>
+              </span> <br> <span class="card-title black-text">Roly Gatus</span>
+           <div class="container">
+            <div class="card-content">
+              <p class="black-text">
+                Programmer and a 2D Game Developer.
+                College Student of Bestlink College of the Philippines.
+                NCII Web Design.
+                Web Designer
+                
+              </p>
+              <br><br>
+              <a href="https://web.facebook.com/gatus.roly/" class="btn  green"><i class="material-icons">facebook</i></a>
+              
+              
+              
+
+             
+            
+            
+            </div>
+           </div>
+          </div>
+        </div>
+
+
+          <div class="col s12 m6">
+            <div class="card " style="border-radius: 20px;">
+              <div class="card-image">
+                <img src="img/ace.jpg"  alt="Marvin Profile Pic">
+              </div>
+              <span class="card-title black-text"> <strong>Logo Designer </strong>
+                </span> <br> <span class="card-title black-text">Marvin Satam </span>
+             <div class="container">
+              <div class="card-content">
+                <p class="black-text">
+                  Web Designer.
+                  College Student of Bestlink College of the Philippines.
+                  
+                </p>
+                <br><br><br><br><br><br>
+                <a href="https://web.facebook.com/baemarvinace0?mibextid=ZbWKwL&_rdc=1&_rdr" class="btn  green"><i class="material-icons">facebook</i></a>
+                
+                
+                
+  
+               
+              
+              
+              </div>
+             </div>
+            </div>
+           </div>
+  
+  
+          </div>
+
+
+          
+          
+
+          <div class="row">
+            <div class="col s12 m6">
+              <div class="card " style="border-radius: 20px;">
+                <div class="card-image">
+                  <img src="img/joey.jpg"  alt="Joey Profile Pic">
+                </div>
+                <span class="card-title black-text"> <strong>Logo Designer </strong>
+                  </span> <br> <span class="card-title black-text">Joey Necesario </span>
+               <div class="container">
+                <div class="card-content">
+                  <p class="black-text">
+                    Web Designer.
+                    College Student of Bestlink College of the Philippines.
+                    
+                  </p>
+                  <br><br><br><br><br><br>
+                  <a href="https://web.facebook.com/joey.necesario.31" class="btn  green"><i class="material-icons">facebook</i></a>
+                  
+                  
+                  
+    
+                 
+                
+                
+                </div>
+               </div>
+              </div>
+    
+    
+            </div>
+
+            <div class="col s12 m6">
+              <div class="card " style="border-radius: 20px;">
+                <div class="card-image">
+                  <img src="img/ulbata (1).jpg" style="width: 47%; margin-left: 25%;"  alt="Aemejie Profile Pic">
+                </div>
+                <span class="card-title black-text"> <strong>Layout Designer </strong>
+                  </span> <br> <span class="card-title black-text">Aemejie Ulbata </span>
+               <div class="container">
+                <div class="card-content">
+                  <p class="black-text">
+                    Web Designer.
+                    College Student of Bestlink College of the Philippines.
+                    
+                  </p>
+                  <br><br><br><br><br><br>
+                  <a href="https://web.facebook.com/aemiejie" class="btn  green"><i class="material-icons">facebook</i></a>
+                  
+                  
+                  
+    
+                 
+                
+                
+                </div>
+               </div>
+              </div>
+    
+    
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12 m6">
+              <div class="card " style="border-radius: 20px;">
+                <div class="card-image">
+                  <img src="img/jolo.png"  alt="Jose Angelo Mamaril Profile Pic">
+                </div>
+                <span class="card-title black-text"> <strong>Web Designer </strong>
+                  </span> <br> <span class="card-title black-text">Jose Angelo Mamaril </span>
+               <div class="container">
+                <div class="card-content">
+                  <p class="black-text">
+                    Web Designer.
+                    College Student of Bestlink College of the Philippines.
+                    
+                  </p>
+                  <br><br><br><br><br><br>
+                  <a href="https://web.facebook.com/dxjolomamaril" class="btn  green"><i class="material-icons">facebook</i></a>
+                  
+                  
+                  
+    
+                 
+                
+                
+                </div>
+               </div>
+              </div>
+    
+    
+            </div>
+            <div class="col s12 m6">
+              <div class="card " style="border-radius: 20px;">
+                <div class="card-image">
+                  <img src="img/"  alt="John Mikhael Galo Profile Pic">
+                </div>
+                <span class="card-title black-text"> <strong>Logo Designer </strong>
+                  </span> <br> <span class="card-title black-text">John Mikhael Galo </span>
+               <div class="container">
+                <div class="card-content">
+                  <p class="black-text">
+                    Web Designer.
+                    College Student of Bestlink College of the Philippines.
+                    
+                  </p>
+                  <br><br><br><br><br><br>
+                  <a href="https://web.facebook.com/KhaelKuroko" class="btn  green"><i class="material-icons">facebook</i></a>
+                  
+                  
+                  
+    
+                 
+                
+                
+                </div>
+               </div>
+              </div>
+    
+    
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col s12 m6">
+              <div class="card " style="border-radius: 20px;">
+                <div class="card-image">
+                  <img src="img/estorba.jpg"  alt="Mark John Estorba Profile Pic">
+                </div>
+                <span class="card-title black-text"> <strong>Web Planner </strong>
+                  </span> <br> <span class="card-title black-text">Mark John Estorba </span>
+               <div class="container">
+                <div class="card-content">
+                  <p class="black-text">
+                    Web Designer.
+                    College Student of Bestlink College of the Philippines.
+                    
+                  </p>
+                  <br><br><br><br><br><br>
+                  <a href="https://web.facebook.com/mj.estorba.02	
+                  " class="btn  green"><i class="material-icons">facebook</i></a>
+                  
+                  
+                  
+    
+                 
+                
+                
+                </div>
+               </div>
+              </div>
+    
+    
+            </div>
+          </div>
+
+
+        
+
+        
+     
+
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-action modal-close waves-effect green darken-2 black-text btn btn-flat">Exit</a></div>
+  
+</div>
+
 
 <div id="registermodal" class="  modal modal-fixed-footer">
   <div class="modal-content">
@@ -577,15 +843,24 @@
 <div class="modal-footer">
   <a href="#!" class="modal-action modal-close waves-effect green black-text btn btn-flat">Exit</a></div>
 </div>
-<footer class="section page-footer center green darken-3">
-  <div class="container">
-    <div class="">
-      <div class="" ><div class="container">
-        <div>
-          <p class="flow-text" style="font-size: small;">ByteSphere University &copy; 2023</p>
-        </div>
-      </div></div>
+<footer class=" page-footer center green darken-2">
+ 
+    <div class="row">
+      <div class="col s12 l6 darken-3">
+        <div class="container">
+        <h4 class="white-text">Resource</h4>
+        <ul>
+         
+          <li><a href="#contact_modal" class="white-text modal-trigger">About Us</a></li>
+          <li><a href="#developer_modal" class="white-text modal-trigger">Developer Info</a></li>
+        </ul>
+      </div>
+      
     </div>
+    
+  </div>
+  <div class="green footer-copyright darken-4">
+    <div class="container"><p class="flow-text" style="font-size: small;">ByteSphere University &copy; 2023</p></div>
   </div>
 </footer>
   <!--Import jQuery before materialize.js-->
